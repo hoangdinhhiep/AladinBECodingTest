@@ -1,0 +1,8 @@
+- java version 11 or newer
+
+- CsvParseAndMerge main method receive 4 arguments: sentencesFilePath, sentenceLinkFilePath, sentenceAudioFilePath, resultFilePath
+example: java CsvParseAndMerge.java /home/hoangdinh/projects/aladin_becodingtest/sentences.csv /home/hoangdinh/projects/aladin_becodingtest/links.csv /home/hoangdinh/projects/aladin_becodingtest/sentences_with_audio.csv /home/hoangdinh/projects/aladin_becodingtest/result.csv
+
+- ImportDb main methos reveive 4 arguments: dbUrl, username, password, inputFilePath
+- Copy PostgreSQL JDBC Driver (https://mvnrepository.com/artifact/org.postgresql/postgresql) into ImportDb class when run
+example: java -cp postgresql-42.7.3.jar ImportDb.java jdbc:postgresql://localhost:5432/tatoeba_db postgres 123qwe /home/hoangdinh/projects/aladin_becodingtest/result.csv

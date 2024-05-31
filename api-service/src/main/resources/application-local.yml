@@ -1,0 +1,37 @@
+spring:
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/tatoeba_db
+    username: postgres
+    password: '123qwe'
+  sql:
+    init:
+      platform: mysql
+      mode: ALWAYS
+
+tatoeba:
+  resource-path: '/home/hoangdinh/projects/aladin_becodingtest/api-service/target'
+  resource-log-file: ${tatoeba.resource-path}/logs/app.lo
+
+logging:
+  file:
+    name: ${tatoeba.resource-log-file}
+    path: ${tatoeba.resource-log-file}
+  level:
+    org:
+      springframework.web: debug
+      hibernate:
+        type.descriptor.sql.BasicBinder: trace
+        sql: debug
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+
+log4j:
+  appender:
+    file:
+      MaxFileSize: 10MB
+      File: ${tatoeba.resource-log-file}

@@ -1,0 +1,18 @@
+spring:
+  profiles.active: dev
+  data:
+    rest:
+      detection-strategy: ANNOTATED
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server.servlet.encoding:
+  charset: UTF-8
+  enabled: true
+  force: true
+
+public_api_prefix_path: api
+
+server.port: 8891
